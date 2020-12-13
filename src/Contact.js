@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './Login';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -20,12 +21,6 @@ class Contact extends React.Component {
   }
 
   render() {
-    const login = (
-      <form action="#" onSubmit={this.authorize}>
-      <input type="password" placeholder="Password" />
-      <input type="submit" />
-      </form>
-    );
     const contactInfo = (
         <ul>
           <li>
@@ -39,8 +34,10 @@ class Contact extends React.Component {
     return (
       <div id="authorization">
         <h1>{this.state.authorized ? "Contact" : "Enter the Password"}</h1>
-        {this.state.authorized ? contactInfo : login}
+        {this.state.authorized ? contactInfo : <Login />}
       </div>
     );
   }
 }
+
+export default Contact
