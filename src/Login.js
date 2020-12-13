@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Login(){
+function Login(props){
     return (
-        <form action="#" onSubmit={this.authorize}>
+        <form action="#" onSubmit={props.authorize}>
             <input type="password" placeholder="Password" />
             <input type="submit" />
         </form>
