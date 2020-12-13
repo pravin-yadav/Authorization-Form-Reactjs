@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactInfo from './ContactInfo';
 import Login from './Login';
 
 class Contact extends React.Component {
@@ -21,20 +22,10 @@ class Contact extends React.Component {
   }
 
   render() {
-    const contactInfo = (
-        <ul>
-          <li>
-            client@example.com
-          </li>
-          <li>
-            555.555.5555
-          </li>
-        </ul>
-    );
     return (
       <div id="authorization">
         <h1>{this.state.authorized ? "Contact" : "Enter the Password"}</h1>
-        {this.state.authorized ? contactInfo : <Login />}
+        {this.state.authorized ? <ContactInfo /> : <Login />}
       </div>
     );
   }
